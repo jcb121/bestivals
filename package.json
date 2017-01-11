@@ -7,15 +7,24 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "rstart": "react-scripts start",
+    "rbuild": "react-scripts build",
+    "rtest": "react-scripts test --env=jsdom",
+    "reject": "react-scripts eject",
+    "deploy": "npm run rbuild && npm start"
   },
   "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "react-scripts": "0.8.5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/jcb121/bestivals"
   },
   "keywords": [
     "node",
