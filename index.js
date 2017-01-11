@@ -6,11 +6,11 @@ app.use(express.static(__dirname + '/build'));
 
 
 app.get('/', function(request, response) {
-  response.send('index');
+  response.sendFile('index.html');
 });
 
 app.post('/', function(request, response){
-  response.send('index');
+  response.sendFile(__dirname + '/build/index.html');
 })
 
 app.listen(app.get('port'), function() {
