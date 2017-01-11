@@ -1,1 +1,1 @@
-web: npm run deploy
+web: react-scripts build && node index.js

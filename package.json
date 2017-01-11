@@ -12,7 +12,7 @@
     "rbuild": "react-scripts build",
     "rtest": "react-scripts test --env=jsdom",
     "reject": "react-scripts eject",
-    "deploy": "npm run rbuild && npm start"
+    "deploy": "react-scripts build && node index.js"
   },
   "dependencies": {
     "express": "4.13.3",
