@@ -1,0 +1,112 @@
+@import '../../../colours';
+
+
+$imgHeight: 50px;
+$padding: 8px;
+
+.entry {
+  position: relative;
+  white-space: nowrap;
+  background-color: transparent;
+  padding:8px;
+  margin-bottom: -8px;
+
+  box-sizing: border-box;
+
+  transition: background-color 200ms ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color3-trans;
+    &::after {
+      color: $color1;
+      background-color: $color5-trans;
+    }
+  }
+  &:after {
+    content:'';
+    height: $imgHeight;
+    width: $imgHeight;
+    position: absolute;
+    left: $padding;
+    top: $padding;
+    color:transparent;
+    transition: color 200ms ease, background-color 200ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  &__text {
+    min-height: $imgHeight;
+    margin-left: $imgHeight + $padding;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__name,
+  &__desc {
+    margin:0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__comment {
+    font-weight: normal;
+    font-size: 14px;
+    margin:0px;
+    white-space: normal;
+    line-height: 18px;
+  }
+
+  &__desc {
+    font-weight:lighter;
+    font-size: 12px;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: $padding;
+    left: $padding;
+    height: $imgHeight;
+    width: $imgHeight;
+  }
+}
+
+.other-entrys {
+  text-align: center;
+
+  &:hover button {
+    background-color: $color3-trans;
+    color: $color5;
+  }
+
+  button {
+    margin: 8px;
+    padding: 8px;
+
+    position: relative;
+    z-index: 1;
+    vertical-align: top;
+
+    border: none;
+    color: $color5-trans;
+    background-color: $color2-trans;
+
+    &:after {
+      content: '\25B2';
+    }
+  }
+}

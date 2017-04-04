@@ -1,0 +1,11 @@
+.events {
+    display: flex;
+    flex-wrap: wrap;
+
+    .entry {
+      flex-basis: 25%;
+      width:25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+}
